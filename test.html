@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCQ TEST</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .question {
+    margin-bottom: 10px;
+  }
+  .options {
+    margin-left: 20px;
+  }
+</style>
+<script>
+  function showResults() {
+    const form = document.querySelector('form');
+    const questions = form.querySelectorAll('.question');
+    let score = 0;
+
+    questions.forEach((question, index) => {
+      const selectedOption = question.querySelector('input[type="radio"]:checked');
+      if (selectedOption) {
+        const correctAnswer = selectedOption.getAttribute('data-correct');
+        if (correctAnswer === 'true') {
+          score++;
+        }
+      }
+    });
+
+    const resultMessage = `You got ${score} out of ${questions.length} correct!`;
+    document.getElementById('result').textContent = resultMessage;
+  }
+</script>
+</head>
+<body style="background-color: #f28238;">
+  <h1 style="text-align: center;">Multiple Choice Questionnaire</h1>
+  
+  <form>
+    <div class="question">
+      <p>1. Which technologies make up the MERN stack?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a" data-correct="false"> a) MySQL, Express, React, Node.js</label><br>
+        <label><input type="radio" name="q1" value="b" data-correct="true"> b) MongoDB, Express, React, Node.js</label><br>
+        <label><input type="radio" name="q1" value="c" data-correct="false"> c) MySQL, Express, Angular, Node.js</label><br>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>2. What does the MEAN stack consist of?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a" data-correct="false"> a) MySQL, Express, Angular, Node.js</label><br>
+        <label><input type="radio" name="q2" value="b" data-correct="true"> b) MongoDB, Express, Angular, Node.js</label><br>
+        <label><input type="radio" name="q2" value="c" data-correct="false"> c) MongoDB, Ember.js, Angular, Node.js</label><br>
+      </div>
+    </div>
+    
+    <div class="question">
+      <p>3. Which technologies are part of the MEVN stack?</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a" data-correct="false"> a) MySQL, Express, Vue.js, Node.js</label><br>
+        <label><input type="radio" name="q3" value="b" data-correct="true"> b)  MongoDB, Express, Vue.js, Node.js</label><br>
+        <label><input type="radio" name="q3" value="c" data-correct="false"> c) MongoDB, Express, React, Node.js</label><br>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+        <button type="button" onclick="showResults()">Submit</button>
+    </div>
+    
+  </form>
+  
+  <div style="text-align: center;" id="result"></div>
+</body>
+</html>

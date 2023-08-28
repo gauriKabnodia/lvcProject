@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Interaction Example</title>
+    <script>
+        var newWindow;
+
+        function openNewWindow() {
+            newWindow = window.open('instruction.html', '_blank', 'width=400,height=300');
+        }
+
+        function displayPromptOnUnload() {
+            
+                newWindow.onunload = function() {
+                    return "You are about to close the window. Please provide some feedback:";
+                };
+            
+        }
+    </script>
+</head>
+<body onload="openNewWindow()" onunload="displayPromptOnUnload()">
+    <h1>Window Interaction Example</h1>
+</body>
+</html>

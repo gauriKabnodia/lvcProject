@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home - LVC</title>
+	<link rel="stylesheet" href="./css/Style1.css">
+</head>
+<body>
+
+	<header>
+        <canvas id="myCanvas"  width="1230" height="100" style="border:10px solid black; background-color: orange;">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+    
+            <nav style="background-color: azure;">
+                <ul style="text-align: center;">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="registration.html">REGISTRATION</a></li>
+                    <li><a href="canvas.html">Gallery</a></li>
+                    <li><a href="address.html">CONTACT US</a></li>
+        
+                </ul>
+            </nav>
+            </header>
+
+	<div style="background-color:cornflowerblue; width: 500px; margin: 0 auto;">
+		
+		<form name="form1" method="get" action="thanks.html" style="align-content: center;">
+		<h1 style="text-align: center;">Enter Details</h1>
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" placeholder="Your Name Here" required></td>
+			</tr>
+		
+			<tr>
+				<td>Email</td>
+				<td><input type="email"></td>
+			</tr>
+		
+		
+			<tr>
+				<td>Gender</td>
+				<td>Male<input type="radio" name="r1">  Female <input type="radio" name="r1"></td>
+			</tr>
+		
+			<tr>
+				<td>Courses</td>
+				<td><select>
+					<option> MEAN Stack</option>
+					<option> MEAR Stack</option>
+					<option> MEVN Stack</option>
+				
+						</select></td>
+			</tr>
+		
+			<tr>
+				<td>
+					Other Course :</td>
+				<td> 
+					Tally 	<input type="checkbox" name="chk1">
+					ChatGPT <input type="checkbox" name="chk2">
+					DevOps 	<input type="checkbox" name="chk3">
+					Python 	<input type="checkbox" name="chk4">
+				</td>
+			</tr>
+		
+		
+			<tr>
+				<td>
+					Remarks :</td>
+				<td> 
+					<textarea rows="4" cols="30"></textarea>
+				</td>
+			</tr>
+					
+			<tr>
+				<td>Attach Resume</td>
+				<td><input type="file"></td>
+			</tr>
+
+			<tr>
+				<td>
+					
+				</td>
+			</tr>
+				
+			
+		</table>				
+		<div style="text-align:center">  
+			<input type="submit" />  
+		</div> 
+		</form>
+			
+		</div>
+
+	<footer>
+		<p>&copy; Designed and developed by  Gauri Kanodia</p>
+	</footer>
+
+</body>
+<script>
+	var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	ctx.font="30px Arial";
+
+	ctx.strokeText("REGISTRATION FORM",500,50);
+	
+</script>
+</html>
